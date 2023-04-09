@@ -1,12 +1,14 @@
 from flask import Flask, jsonify, render_template, request
 import json
 import preprocess_text
-import keras
-from keras.preprocessing.sequence import pad_sequences
-from keras.preprocessing.text import Tokenizer
-from keras.models import load_model
-
+import tensorflow as tf
+from tensorflow.keras.preprocessing.sequence import pad_sequences
+from tensorflow.keras.preprocessing.text import Tokenizer
+from tensorflow.keras.models import load_model
 import pickle
+
+
+
 
 app = Flask(__name__)
 
